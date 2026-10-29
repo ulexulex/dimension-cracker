@@ -89,7 +89,7 @@ if __name__ == "__main__":
             if command == "exit" or command == "quit":
                 quit()
             elif command == "help":
-                print("\n\t\tHelp Menu\n\nCommands:\nexit or quit: Close the program\nid: enter a dimension ID after ':' to get the simplest keyword\nkeyword: gives you the simplest possible keyword from the keyword entered, useful fot making texts shorter")
+                print("\n\t\tHelp Menu\n\nCommands:\nexit or quit: Close the program\nid: enter a dimension ID after ':' to get the simplest keyword\nkeyword: gives you the simplest keyword from the keyword entered, useful for making texts shorter")
             elif command[0:2] == "id":
                 id= int(command[3:])
                 data = readkw(dimdata,id)
