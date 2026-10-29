@@ -2,7 +2,6 @@
 from math import ceil
 from itertools import product
 from hashlib import sha256
-from time import time
 
 MAX_VALUE=2147483648
 
@@ -60,7 +59,6 @@ if __name__ == "__main__":
         while True:
             ansr = input("No data file found. Create one? y/n/h: ")
             if ansr == "y":
-                start_time = time()
                 with open("dimdata", "w+") as datafile:
                     counter = 0
                     percentcounter = 0
@@ -77,7 +75,6 @@ if __name__ == "__main__":
                             percentcounter = 0
                         if counter == MAX_VALUE:
                             quit()
-                print(f"Seconds: {time() - start_time}")
                 quit()
             elif ansr == "n":
                 quit()
