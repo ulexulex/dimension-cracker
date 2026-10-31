@@ -3,7 +3,8 @@ from math import ceil
 from itertools import product
 from hashlib import sha256
 
-MAX_VALUE=2147483648
+MAX_VALUE=2147483647
+usefulceil = ceil(MAX_VALUE/10000)
 
 def get_id(text):
     text += ":why_so_salty#LazyCrypto"
@@ -69,8 +70,8 @@ if __name__ == "__main__":
                         res = storenewid(datafile, i)
                         counter += res
                         percentcounter += res
-                        if percentcounter == ceil(MAX_VALUE/100):
-                            percent += 1
+                        if percentcounter == usefulceil:
+                            percent += .01
                             print(f"\r{percent}%", end="",flush=True)
                             percentcounter = 0
                         if counter == MAX_VALUE:
