@@ -72,7 +72,7 @@ if __name__ == "__main__":
                         percentcounter += res
                         if percentcounter == usefulceil:
                             percent += .01
-                            print(f"\r{percent}%", end="",flush=True)
+                            print(f"\r{percent:.2f}%", end="",flush=True)
                             percentcounter = 0
                         if counter == MAX_VALUE:
                             quit()
